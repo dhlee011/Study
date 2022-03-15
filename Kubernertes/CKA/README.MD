@@ -29,11 +29,13 @@ mutil Container 관련 문제.
 
 참고문서 : https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/    
 
-kubectl run multi-test --image=nginx --dry-run=client -o yaml > mult-test.yaml   
-
 YAML 파일 리디렉션 후 작업. 하나의 파드 안에 두개의 컨테이너 정의.   
 
 환경변수 설정시  'name=alpha'처럼 설정하기 위해선 name 부분과 value 값을 따로 정의해야 한다.   
+
+
+
+kubectl run multi-test --image=nginx --dry-run=client -o yaml > mult-test.yaml   
 
 mult-test.yaml   
 ---
