@@ -45,8 +45,15 @@ spec:
 2.List the InternalIP of all nodes of the cluster. Save the result to a file /root/CKA/node_ips   
 Answer should be in the format: InternalIP of master<space>InternalIP of node1<space>InternalIP of node2<space>InternalIP of node3 (in a single line)   
 ---
+참고문서 :
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/   
 
-
+Cluster Nodes의 IP list를 /root/CKA/node_ips에 InternalIP of master<space>InternalIP 형식으로 저장.   
+       
+---
+          
+kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=="InternalIP")].address}' > /root/CKA/node_ips   
+          
 
 ============================================================================================
      
