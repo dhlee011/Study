@@ -106,11 +106,23 @@ fsGroup: 2000
 ---   
 참고문서 :   
 https://kubernetes.io/docs/concepts/policy/pod-security-policy/   
-    
+https://kubernetes.io/blog/2020/12/14/kubernetes-release-1.20-fsgroupchangepolicy-fsgrouppolicy/   
+          
 Pod Security Policy 문제.   
    
 ---   
 kubectl run non-pod --image=redis:alpine --dry-run=client -o yaml > non-pod.yaml   
 
-non.pod.yaml   
+non-pod.yaml   
 ---   
+apiVersion: v1   
+kind: Pod   
+metadata:   
+  name: non-pod   
+spec:   
+  containers:   
+  - name: non-pod   
+    image: redis:alpine
+  securityContext:   
+    runAsUser: 1000      
+    fsGroup: 2000   
