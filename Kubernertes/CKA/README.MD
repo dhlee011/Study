@@ -20,7 +20,7 @@ kubectl create clusterrolebinding Fest-role-binding --clusterrole=Fest-role --se
 
       
 
-=============================================================================================   
+============================================================================================      
      
 3.Create a pod called multi-test with two containers.     
 Container 1, name: one, image: nginx. env= name: alpha   
