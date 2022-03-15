@@ -1,3 +1,13 @@
+1.Create a new service account with the name pvviewer.   
+Grant this Service account access to list all PersistentVolumes in the cluster by creating an appropriate cluster role called pvviewer-role and ClusterRoleBinding called pvviewer-role-binding.   
+Next, create a pod called pvviewer with the image: redis and serviceAccount: pvviewer in the default namespace   
+
+ 
+
+
+
+
+
 3.Create a pod called multi-test with two containers.     
 Container 1, name: one, image: nginx. env= name: alpha   
 Container 2, name: two, image: busybox, command sleep 4800. env= name: beta 
