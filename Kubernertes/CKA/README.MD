@@ -36,7 +36,7 @@ spec:
   containers:   
   - name: Fest      
     image: redis      
-  serviceAccountName: Fest
+  serviceAccountName: Fest   
   automountServiceAccountToken: false   
    
    
