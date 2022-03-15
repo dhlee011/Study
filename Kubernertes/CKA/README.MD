@@ -2,10 +2,11 @@
 Container 1, name: one, image: nginx. env= name: alpha   
 Container 2, name: two, image: busybox, command sleep 4800. env= name: beta 
 ----------------------------    
-mutil Container 관련 문제. 참고문서   
-https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/    
-
-
+mutil Container 관련 문제.        
+참고문서 : https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/    
+ 
+mult-test.yaml   
+---
 apiVersion: v1   
 kind: Pod   
 metadata:   
