@@ -48,7 +48,7 @@ Answer should be in the format: InternalIP of master<space>InternalIP of node1<s
 참고문서 :
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/   
 
-Cluster Nodes의 IP list를 /root/CKA/node_ips에 InternalIP of master<space>InternalIP 형식으로 저장.   
+Cluster Nodes의 IP list를 /root/CKA/node_ips에 InternalIP of master<space>InternalIP 형식으로 저장. Jasonpath 방식으로 출력.
        
 ---
           
