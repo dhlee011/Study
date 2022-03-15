@@ -41,7 +41,8 @@ spec:
    
    
 ============================================================================================      
-List the InternalIP of all nodes of the cluster. Save the result to a file /root/CKA/node_ips   
+   
+2.List the InternalIP of all nodes of the cluster. Save the result to a file /root/CKA/node_ips   
 Answer should be in the format: InternalIP of master<space>InternalIP of node1<space>InternalIP of node2<space>InternalIP of node3 (in a single line)   
 ---
 
