@@ -100,9 +100,9 @@ spec:
          
 ============================================================================================   
           
-4.Create a Pod called non-pod , image: redis:alpine
-runAsUser: 1000
-fsGroup: 2000
+4.Create a Pod called non-pod , image: redis:alpine   
+runAsUser: 1000   
+fsGroup: 2000   
 ---   
 참고문서 :   
 https://kubernetes.io/docs/concepts/policy/pod-security-policy/   
