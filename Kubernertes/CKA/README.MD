@@ -14,7 +14,7 @@ metadata:
   name: multi-test   
 spec:   
   containers:   
-  - name: one
+  - name: one   
     image: nginx   
     env:   
     - name: name   
