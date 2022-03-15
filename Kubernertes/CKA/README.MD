@@ -6,6 +6,7 @@ mutil Container 관련 문제.
 
 https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/   
 
+---
 apiVersion: v1 #
 kind: Pod
 metadata:
