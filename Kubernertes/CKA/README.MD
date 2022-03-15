@@ -41,6 +41,13 @@ spec:
    
    
 ============================================================================================      
+List the InternalIP of all nodes of the cluster. Save the result to a file /root/CKA/node_ips   
+Answer should be in the format: InternalIP of master<space>InternalIP of node1<space>InternalIP of node2<space>InternalIP of node3 (in a single line)   
+---
+
+
+
+============================================================================================
      
 3.Create a pod called multi-test with two containers.     
 Container 1, name: one, image: nginx. env= name: alpha   
