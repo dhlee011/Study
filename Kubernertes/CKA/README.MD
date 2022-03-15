@@ -95,4 +95,22 @@ spec:
     command: ["sleep", "4800"]   
     env:   
     -  name: name   
-       value: beta   
+       value: beta    
+          
+         
+============================================================================================   
+          
+4.Create a Pod called non-pod , image: redis:alpine
+runAsUser: 1000
+fsGroup: 2000
+---   
+참고문서 :   
+https://kubernetes.io/docs/concepts/policy/pod-security-policy/   
+    
+Pod Security Policy 문제.   
+   
+---   
+kubectl run non-pod --image=redis:alpine --dry-run=client -o yaml > non-pod.yaml   
+
+non.pod.yaml   
+---   
