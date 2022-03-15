@@ -24,8 +24,20 @@ kubectl create clusterrolebinding Fest-role-binding --clusterrole=Fest-role --se
 
 kubectl run Fest --image=redis --dry-run=client -o yaml > Fest.yaml
 
-
-
+Fest.yaml
+---
+apiVersion: v1   
+kind: Pod   
+metadata:   
+  name: Fest   
+spec:   
+  containers:   
+  - name: Fest      
+    image: redis      
+  serviceAccountName: Fest
+  automountServiceAccountToken: false   
+   
+   
 ============================================================================================      
      
 3.Create a pod called multi-test with two containers.     
