@@ -7,6 +7,7 @@ mutil Container 관련 문제.
 참고문서 : https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/    
 
 kubectl run multi-test --image=nginx --dry-run=client -o yaml > mult-test.yaml   
+
 YAML 파일 리디렉션 후 작업  
 
 mult-test.yaml   
