@@ -3,10 +3,13 @@ Grant this Service account access to list all PersistentVolumes in the cluster b
 appropriate cluster role called Fest-role and ClusterRoleBinding called Fest-role-binding.   
 Next, create a pod called Fest with the image: redis and serviceAccount: Fest in the default namespace   
 ------   
-1. Fest 라는 이름의 Service account 생성.   
-2. PersistentVolumes list에 접근할 수 있는 Fest-role 이라는 ClusterRole 생성.   
-3. Fest(Service account)와 Fest-role(ClusterRole)을 바인딩하는, Fest-role-binding 이라는 ClusterRoleBinding 생성.   
-4. redis 이미지를 사용하고 Fest serviceAccount를 사용하는 Fest 라는 파드를 default namespae에 생성.    
+1.Fest 라는 이름의 Service account 생성.   
+
+2.PersistentVolumes list에 접근할 수 있는 Fest-role 이라는 ClusterRole 생성.   
+
+3.Fest(Service account)와 Fest-role(ClusterRole)을 바인딩하는, Fest-role-binding 이라는 ClusterRoleBinding 생성.   
+
+4.redis 이미지를 사용하고 Fest serviceAccount를 사용하는 Fest 라는 파드를 default namespae에 생성.    
 
 
 
