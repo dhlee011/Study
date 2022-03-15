@@ -120,9 +120,9 @@ kind: Pod
 metadata:   
   name: non-pod   
 spec:   
-    containers:   
+  containers:    
   - name: non-pod   
-    image: redis:alpine
+    image: redis:alpine   
   securityContext:   
     runAsUser: 1000      
     fsGroup: 2000   
