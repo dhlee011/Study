@@ -4,8 +4,9 @@ appropriate cluster role called Fest-role and ClusterRoleBinding called Fest-rol
 Next, create a pod called Fest with the image: redis and serviceAccount: Fest in the default namespace   
 ------   
 
-참고 문서: https://kubernetes.io/docs/reference/access-authn-authz/rbac/   
-          https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/   
+참고 문서:    
+https://kubernetes.io/docs/reference/access-authn-authz/rbac/   
+https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/   
           
 1.Fest 라는 이름의 Service account 생성.   
 
@@ -47,7 +48,8 @@ Container 2, name: two, image: busybox, command sleep 4800. env= name: beta
 ----------------------------    
 mutil Container 관련 문제.    
 
-참고문서 : https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/    
+참고문서 :   
+https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/    
 
 YAML 파일 리디렉션 후 작업. 하나의 파드 안에 두개의 컨테이너 정의.   
 
