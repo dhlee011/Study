@@ -5,7 +5,8 @@ Next, create a pod called Fest with the image: redis and serviceAccount: Fest in
 ------   
 
 참고 문서: https://kubernetes.io/docs/reference/access-authn-authz/rbac/   
-
+          https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/   
+          
 1.Fest 라는 이름의 Service account 생성.   
 
 2.PersistentVolumes list에 접근할 수 있는 Fest-role 이라는 ClusterRole 생성.   
