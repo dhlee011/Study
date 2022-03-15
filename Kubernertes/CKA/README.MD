@@ -11,10 +11,10 @@ Next, create a pod called Fest with the image: redis and serviceAccount: Fest in
 
 4.redis 이미지를 사용하고 Fest serviceAccount를 사용하는 Fest 라는 파드를 default namespae에 생성.    
 
+   
+   
 
-
-
-
+   
 3.Create a pod called multi-test with two containers.     
 Container 1, name: one, image: nginx. env= name: alpha   
 Container 2, name: two, image: busybox, command sleep 4800. env= name: beta 
