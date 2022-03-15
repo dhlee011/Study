@@ -120,7 +120,7 @@ kind: Pod
 metadata:   
   name: non-pod   
 spec:   
-  containers:   
+    containers:   
   - name: non-pod   
     image: redis:alpine
   securityContext:   
