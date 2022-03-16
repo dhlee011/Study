@@ -160,5 +160,8 @@ spec:
       port: 80   
           
        
+kubectl create sa pvviewer
 
+kubectl create clusterrole pvviewer-role --verb=list --resource=persistentvolumes
+kubectl create clusterrolebinding pvviewer-role-binding --clusterrole=pvviewer-role --serviceaccount=default:pvviewer
            
