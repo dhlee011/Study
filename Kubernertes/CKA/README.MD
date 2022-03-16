@@ -142,7 +142,8 @@ https://kubernetes.io/docs/concepts/services-networking/network-policies/#allow-
 network policy 오브젝트는 traffic의 inbound, outbound 등 방향 설정이 가능.   
 
           networkpolicy.yaml   
----   
+```
+          ---   
 apiVersion: networking.k8s.io/v1           
           kind: NetworkPolicy   
           metadata:   
@@ -159,5 +160,5 @@ apiVersion: networking.k8s.io/v1
               - protocol: TCP   
                 port: 80   
           
-       
+```       
           
