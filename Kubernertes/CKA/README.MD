@@ -165,3 +165,29 @@ kubectl create sa pvviewer
 kubectl create clusterrole pvviewer-role --verb=list --resource=persistentvolumes
 kubectl create clusterrolebinding pvviewer-role-binding --clusterrole=pvviewer-role --serviceaccount=default:pvviewer
            
+
+          
+          
+          kubectl run --generator=run-pod/v1 --dry-run --image nginx multi-pod -o yaml > pod2.yaml
+kubectl run --generator=run-pod/v1 multi-pod --image busybox --env=name=beta --dry-run --command "sleep 4800" -o yaml
+
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multi-pod
+spec:
+  containers:
+  - image: nginx
+    imagePullPolicy: IfNotPresent
+    name: alpha
+    env:
+      - name: name
+        value: alpha
+  - image: busybox
+    name: beta
+    command: ["sleep", "4800"]
+    env:
+      - name: name
+        value: beta
+EOF
