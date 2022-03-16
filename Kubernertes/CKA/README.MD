@@ -143,7 +143,7 @@ network policy 오브젝트는 traffic의 inbound, outbound 등 방향 설정이
 
           networkpolicy.yaml   
 ---   
-          apiVersion: networking.k8s.io/v1   
+apiVersion: networking.k8s.io/v1           
           kind: NetworkPolicy   
           metadata:   
             name: ingress-to-nptest   
