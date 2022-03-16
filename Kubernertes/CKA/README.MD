@@ -141,53 +141,23 @@ https://kubernetes.io/docs/concepts/services-networking/network-policies/#allow-
 네트워크 트러블 슈팅 문제. 기존에 생성된 Pod와 Service 오브젝트를 수정하지 않고 Network Policy 오브젝트를 사용하여 해결.   
 network policy 오브젝트는 traffic의 inbound, outbound 등 방향 설정이 가능.   
 
-networkpolicy.yaml   
+          networkpolicy.yaml   
 ---   
-apiVersion: networking.k8s.io/v1   
-kind: NetworkPolicy   
-metadata:   
-  name: ingress-to-nptest   
-  namespace: default   
-spec:   
-  podSelector:   
-    matchLabels:   
-      run: np-test-1   
-  policyTypes:   
-  - Ingress   
-  ingress:   
-  - ports:   
-    - protocol: TCP   
-      port: 80   
+          apiVersion: networking.k8s.io/v1   
+          kind: NetworkPolicy   
+          metadata:   
+            name: ingress-to-nptest   
+            namespace: default   
+          spec:   
+            podSelector:   
+              matchLabels:   
+                run: np-test-1   
+            policyTypes:   
+            - Ingress   
+            ingress:   
+            - ports:   
+              - protocol: TCP   
+                port: 80   
           
        
-kubectl create sa pvviewer
-
-kubectl create clusterrole pvviewer-role --verb=list --resource=persistentvolumes
-kubectl create clusterrolebinding pvviewer-role-binding --clusterrole=pvviewer-role --serviceaccount=default:pvviewer
-           
-
           
-                    
-          kubectl run --generator=run-pod/v1 --dry-run --image nginx multi-pod -o yaml > pod2.yaml
-kubectl run --generator=run-pod/v1 multi-pod --image busybox --env=name=beta --dry-run --command "sleep 4800" -o yaml
-
-          kubectl apply -f - <<EOF
-apiVersion: v1
-kind: Pod
-metadata:
-  name: multi-pod
-spec:
-  containers:
-  - image: nginx
-    imagePullPolicy: IfNotPresent
-    name: alpha
-    env:
-      - name: name
-        value: alpha
-  - image: busybox
-    name: beta
-    command: ["sleep", "4800"]
-    env:
-      - name: name
-        value: beta
-EOF
