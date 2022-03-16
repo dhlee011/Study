@@ -138,6 +138,28 @@ Important: Don't delete any current objects deployed.
 참고문서 : 
 https://kubernetes.io/docs/concepts/services-networking/network-policies/#allow-all-ingress-traffic             
 
-네트워크 트러블 슈팅 문제. 기존에 생성된 파드와 서비스 오브젝트를 수정하지 않고 네트워크 폴리시 오브젝트를 사용하여 해결.               
+네트워크 트러블 슈팅 문제. 기존에 생성된 Pod와 Service 오브젝트를 수정하지 않고 Network Policy 오브젝트를 사용하여 해결.   
+network policy 오브젝트는 traffic의 inbound, outbound 등 방향 설정이 가능.   
+
+networkpolicy.yaml
+---
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ingress-to-nptest
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      run: np-test-1
+  policyTypes:
+  - Ingress
+  ingress:
+  - ports:
+    - protocol: TCP
+      port: 80          
+          
+       
 
            
